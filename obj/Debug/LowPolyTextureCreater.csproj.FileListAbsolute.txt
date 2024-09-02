@@ -1,0 +1,14 @@
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.AssemblyReference.cache
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.CustomColorDialog.ColorBox.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.CustomColorDialog.ColorDialog.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.CustomColorDialog.ColorSlider.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.CustomColorDialog.ColorWheel.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.Properties.Resources.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.GenerateResource.cache
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.CoreCompileInputs.cache
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.MainForm.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.exe.config
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.exe
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.pdb
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.exe
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.pdb
