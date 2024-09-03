@@ -12,6 +12,8 @@ namespace LowPolyTextureCreater
 {
     public partial class CreateTextureForm : Form
     {
+        public int ColorAmount => (int) colorAmountNumericUpDown.Value;
+
         public CreateTextureForm()
         {
             InitializeComponent();
@@ -30,15 +32,6 @@ namespace LowPolyTextureCreater
             colorAmountNumericUpDown.ForeColor = Color.FromArgb(230, 230, 230);
         }
 
-        private void createButton_Click(object sender, EventArgs e)
-        {
-            MainForm.Instance.CreateTexture((int) colorAmountNumericUpDown.Value);
-            this.Close();
-        }
-
-        private void cancelButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
     }
 }

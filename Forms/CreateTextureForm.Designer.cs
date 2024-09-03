@@ -39,6 +39,7 @@ namespace LowPolyTextureCreater
             // createButton
             // 
             this.createButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.createButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.createButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createButton.Location = new System.Drawing.Point(15, 36);
             this.createButton.Name = "createButton";
@@ -46,7 +47,7 @@ namespace LowPolyTextureCreater
             this.createButton.TabIndex = 0;
             this.createButton.Text = "Создать";
             this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+
             // 
             // label1
             // 
@@ -61,6 +62,7 @@ namespace LowPolyTextureCreater
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Location = new System.Drawing.Point(107, 36);
             this.cancelButton.Name = "cancelButton";
@@ -68,7 +70,6 @@ namespace LowPolyTextureCreater
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Отмена";
             this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // colorAmountNumericUpDown
             // 

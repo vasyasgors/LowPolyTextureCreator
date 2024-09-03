@@ -18,7 +18,7 @@ namespace LowPolyTextureCreater
 {
     public partial class MainForm : Form
     {
-        public static MainForm Instance;
+
 
 
         private int selectedIndexColor = -1;
@@ -29,9 +29,6 @@ namespace LowPolyTextureCreater
 
         public MainForm()
         {
-            if (Instance != null) return;
-
-            Instance = this;
 
             InitializeComponent();
 
@@ -139,7 +136,11 @@ namespace LowPolyTextureCreater
         {
 
             CreateTextureForm createTextureForm = new CreateTextureForm();
-            createTextureForm.ShowDialog();
+            if (createTextureForm.ShowDialog() == DialogResult.OK)
+            {
+                texture = new Texture(createTextureForm.ColorAmount);
+                texture.FillPictureBox(sourcePictureBox);
+            }
         }
 
         private void добавитьСлеваToolStripMenuItem_Click(object sender, EventArgs e)
