@@ -36,22 +36,16 @@
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.AddColorRight = new System.Windows.Forms.Button();
-            this.RemoveColorRight = new System.Windows.Forms.Button();
-            this.RemoveColorLeft = new System.Windows.Forms.Button();
-            this.AddColorLeft = new System.Windows.Forms.Button();
-            this.CreateTexture = new System.Windows.Forms.Button();
-            this.colorAmountTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sourcePictureBox
             // 
+            this.sourcePictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.sourcePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sourcePictureBox.Location = new System.Drawing.Point(82, 65);
+            this.sourcePictureBox.Location = new System.Drawing.Point(25, 49);
             this.sourcePictureBox.Name = "sourcePictureBox";
             this.sourcePictureBox.Size = new System.Drawing.Size(512, 512);
             this.sourcePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -61,35 +55,52 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(646, 24);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(562, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // файлToolStripMenuItem
             // 
+            this.файлToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.создатьToolStripMenuItem,
             this.загрузитьToolStripMenuItem,
             this.сохранитьToolStripMenuItem});
+            this.файлToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // загрузитьToolStripMenuItem
             // 
+            this.загрузитьToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.загрузитьToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.загрузитьToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.загрузитьToolStripMenuItem.ShowShortcutKeys = false;
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.загрузитьToolStripMenuItem.Text = "Открыть";
+            this.загрузитьToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.загрузитьToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
+            this.сохранитьToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.сохранитьToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.сохранитьToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // saveFileDialog1
@@ -100,100 +111,23 @@
             // 
             this.colorDialog1.FullOpen = true;
             // 
-            // button1
+            // создатьToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(183, 583);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(287, 27);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Открыть альтернатинвый выбиральщик цвета";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // AddColorRight
-            // 
-            this.AddColorRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddColorRight.Location = new System.Drawing.Point(600, 249);
-            this.AddColorRight.Name = "AddColorRight";
-            this.AddColorRight.Size = new System.Drawing.Size(37, 35);
-            this.AddColorRight.TabIndex = 11;
-            this.AddColorRight.Text = "+";
-            this.AddColorRight.UseVisualStyleBackColor = true;
-            this.AddColorRight.Click += new System.EventHandler(this.AddColorRight_Click);
-            // 
-            // RemoveColorRight
-            // 
-            this.RemoveColorRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RemoveColorRight.Location = new System.Drawing.Point(600, 290);
-            this.RemoveColorRight.Name = "RemoveColorRight";
-            this.RemoveColorRight.Size = new System.Drawing.Size(37, 35);
-            this.RemoveColorRight.TabIndex = 12;
-            this.RemoveColorRight.Text = "-";
-            this.RemoveColorRight.UseVisualStyleBackColor = true;
-            this.RemoveColorRight.Click += new System.EventHandler(this.RemoveColorRight_Click);
-            // 
-            // RemoveColorLeft
-            // 
-            this.RemoveColorLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RemoveColorLeft.Location = new System.Drawing.Point(39, 290);
-            this.RemoveColorLeft.Name = "RemoveColorLeft";
-            this.RemoveColorLeft.Size = new System.Drawing.Size(37, 35);
-            this.RemoveColorLeft.TabIndex = 14;
-            this.RemoveColorLeft.Text = "-";
-            this.RemoveColorLeft.UseVisualStyleBackColor = true;
-            this.RemoveColorLeft.Click += new System.EventHandler(this.RemoveColorLeft_Click);
-            // 
-            // AddColorLeft
-            // 
-            this.AddColorLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddColorLeft.Location = new System.Drawing.Point(39, 249);
-            this.AddColorLeft.Name = "AddColorLeft";
-            this.AddColorLeft.Size = new System.Drawing.Size(37, 35);
-            this.AddColorLeft.TabIndex = 13;
-            this.AddColorLeft.Text = "+";
-            this.AddColorLeft.UseVisualStyleBackColor = true;
-            this.AddColorLeft.Click += new System.EventHandler(this.AddColorLeft_Click);
-            // 
-            // CreateTexture
-            // 
-            this.CreateTexture.Location = new System.Drawing.Point(361, 36);
-            this.CreateTexture.Name = "CreateTexture";
-            this.CreateTexture.Size = new System.Drawing.Size(75, 23);
-            this.CreateTexture.TabIndex = 15;
-            this.CreateTexture.Text = "Создать";
-            this.CreateTexture.UseVisualStyleBackColor = true;
-            this.CreateTexture.Click += new System.EventHandler(this.CreateTexture_Click);
-            // 
-            // colorAmountTextBox
-            // 
-            this.colorAmountTextBox.Location = new System.Drawing.Point(315, 38);
-            this.colorAmountTextBox.Name = "colorAmountTextBox";
-            this.colorAmountTextBox.Size = new System.Drawing.Size(30, 20);
-            this.colorAmountTextBox.TabIndex = 16;
-            this.colorAmountTextBox.Text = "4";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(230, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Кол-во цветов:";
+            this.создатьToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.создатьToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
+            this.создатьToolStripMenuItem.ShortcutKeyDisplayString = "Ctl+N";
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.создатьToolStripMenuItem.Text = "Создать";
+            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click_1);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 624);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.colorAmountTextBox);
-            this.Controls.Add(this.CreateTexture);
-            this.Controls.Add(this.RemoveColorLeft);
-            this.Controls.Add(this.AddColorLeft);
-            this.Controls.Add(this.RemoveColorRight);
-            this.Controls.Add(this.AddColorRight);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(562, 586);
             this.Controls.Add(this.sourcePictureBox);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -220,14 +154,7 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button AddColorRight;
-        private System.Windows.Forms.Button RemoveColorRight;
-        private System.Windows.Forms.Button RemoveColorLeft;
-        private System.Windows.Forms.Button AddColorLeft;
-        private System.Windows.Forms.Button CreateTexture;
-        private System.Windows.Forms.TextBox colorAmountTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
     }
 }
 

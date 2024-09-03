@@ -12,3 +12,4 @@ C:\Users\Vasya\Desktop\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.exe
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.pdb
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.exe
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.pdb
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.CreateTextureForm.resources

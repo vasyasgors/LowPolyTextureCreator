@@ -15,18 +15,18 @@ namespace LowPolyTextureCreater
         private const int Width = 256;
 
 
-        public List<Color> Colors;
+        public List<COLORColor> Colors;
 
         private int pixelForColor;
 
         public Texture(int colorAmount)
         {
-            Colors = new List<Color>();
+            Colors = new List<COLORColor>();
             Random rnd = new Random();
 
             for (int i = 0; i < colorAmount; i++)
             {
-                Colors.Add(new Color((byte) rnd.Next(0, 255), (byte) rnd.Next(0, 255), (byte) rnd.Next(0, 255)) );
+                Colors.Add(new COLORColor((byte) rnd.Next(0, 255), (byte) rnd.Next(0, 255), (byte) rnd.Next(0, 255)) );
             }
 
             pixelForColor = (int) (Width / Colors.Count);
@@ -34,7 +34,7 @@ namespace LowPolyTextureCreater
 
         public Texture(PictureBox pictureBox, string fileName)
         {
-            Colors = new List<Color>();
+            Colors = new List<COLORColor>();
 
             //Image bitmap = Bitmap.FromFile(fileName);
             Bitmap bitmap = new Bitmap(fileName);
@@ -49,7 +49,7 @@ namespace LowPolyTextureCreater
                 {
                     index = y * Width * img.BytePerPixel + x * img.BytePerPixel;
 
-                    Color pixelColor = new Color(
+                    COLORColor pixelColor = new COLORColor(
                         img.Pixels[index + 2], 
                         img.Pixels[index + 1], 
                         img.Pixels[index + 0]);
@@ -111,18 +111,18 @@ namespace LowPolyTextureCreater
             return x / pixelForColor2;
         }
         
-        public Color GetColorByPixelPosition(int pictureBoxSize, int x)
+        public COLORColor GetColorByPixelPosition(int pictureBoxSize, int x)
         {
             int pixelForColor2 = pictureBoxSize / Colors.Count;
             return  Colors[x / pixelForColor2];
         }
 
-        public void SetColorByIndex(int index, Color color)
+        public void SetColorByIndex(int index, COLORColor color)
         {
             Colors[index] = color;
         }
 
-        public void AddColorToRight(Color color)
+        public void AddColorToRight(COLORColor color)
         {
             Colors.Add(color);
             pixelForColor = (int)(Width / Colors.Count);
@@ -136,7 +136,7 @@ namespace LowPolyTextureCreater
             pixelForColor = (int)(Width / Colors.Count);
         }
 
-        public void AddColorToLeft(Color color)
+        public void AddColorToLeft(COLORColor color)
         {
             Colors.Insert(0, color);
             pixelForColor = (int)(Width / Colors.Count);
