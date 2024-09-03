@@ -24,13 +24,10 @@ namespace ColorPicker
 {
     public partial class ColorDialog : Form
     {
-
-        public ColorWheel ColorWheel => colorWheel1;
         public ColorDialog()
         {
             this.InitializeComponent();
             this.colorWheel1.Color = ColorHsv.FromColor(Color.White);
-    
         }
 
         public ColorBgra WheelColor
@@ -51,19 +48,6 @@ namespace ColorPicker
             }
         }
 
-        public Color Color
-        {
-            get
-            {
-                return Color.FromArgb(redColorSlider.Value, greenColorSlider.Value, blueColorSlider.Value);
-            }
-
-            set
-            {
-                this.colorWheel1.Color = ColorHsv.FromColor(value);
-
-            }
-        }
         private int _IgnoreChangedEventCounter;
 
         private bool IgnoreChangedEvents
@@ -320,7 +304,5 @@ namespace ColorPicker
             this.PopIgnoreChangedEvents();
             this.Update();
         }
-
-
     }
 }

@@ -37,7 +37,6 @@
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьСлеваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьСправаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,10 +124,6 @@
             // 
             this.saveFileDialog1.Filter = "PNG|*.png";
             // 
-            // colorDialog1
-            // 
-            this.colorDialog1.FullOpen = true;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
@@ -139,13 +134,13 @@
             this.копироватьToolStripMenuItem,
             this.вставитьToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(168, 114);
             // 
             // добавитьСлеваToolStripMenuItem
             // 
             this.добавитьСлеваToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.добавитьСлеваToolStripMenuItem.Name = "добавитьСлеваToolStripMenuItem";
-            this.добавитьСлеваToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.добавитьСлеваToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.добавитьСлеваToolStripMenuItem.Text = "Добавить слева";
             this.добавитьСлеваToolStripMenuItem.Click += new System.EventHandler(this.добавитьСлеваToolStripMenuItem_Click);
             // 
@@ -153,7 +148,7 @@
             // 
             this.добавитьСправаToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.добавитьСправаToolStripMenuItem.Name = "добавитьСправаToolStripMenuItem";
-            this.добавитьСправаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.добавитьСправаToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.добавитьСправаToolStripMenuItem.Text = "Добавить справа";
             this.добавитьСправаToolStripMenuItem.Click += new System.EventHandler(this.добавитьСправаToolStripMenuItem_Click);
             // 
@@ -161,7 +156,7 @@
             // 
             this.удалитьToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
@@ -169,7 +164,7 @@
             // 
             this.копироватьToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.копироватьToolStripMenuItem.Text = "Копировать";
             this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
@@ -177,7 +172,7 @@
             // 
             this.вставитьToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
-            this.вставитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вставитьToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.вставитьToolStripMenuItem.Text = "Вставить";
             this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
@@ -195,7 +190,6 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Low Poly Texture Creator";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sourcePictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -214,7 +208,6 @@
         private System.Windows.Forms.ToolStripMenuItem загрузитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem добавитьСлеваToolStripMenuItem;

@@ -15,18 +15,18 @@ namespace LowPolyTextureCreater
         private const int Width = 256;
 
 
-        public List<COLORColor> Colors;
+        public List<Color> Colors;
 
         private int pixelForColor;
 
         public Texture(int colorAmount)
         {
-            Colors = new List<COLORColor>();
+            Colors = new List<Color>();
             Random rnd = new Random();
 
             for (int i = 0; i < colorAmount; i++)
             {
-                Colors.Add(new COLORColor((byte) rnd.Next(0, 255), (byte) rnd.Next(0, 255), (byte) rnd.Next(0, 255)) );
+                Colors.Add(Color.FromArgb(rnd.Next(0, 255), rnd.Next(0, 255),rnd.Next(0, 255)) );
             }
 
             pixelForColor = (int) (Width / Colors.Count);
@@ -34,7 +34,7 @@ namespace LowPolyTextureCreater
 
         public Texture(PictureBox pictureBox, string fileName)
         {
-            Colors = new List<COLORColor>();
+            Colors = new List<Color>();
 
             //Image bitmap = Bitmap.FromFile(fileName);
             Bitmap bitmap = new Bitmap(fileName);
@@ -49,7 +49,7 @@ namespace LowPolyTextureCreater
                 {
                     index = y * Width * img.BytePerPixel + x * img.BytePerPixel;
 
-                    COLORColor pixelColor = new COLORColor(
+                    Color pixelColor = Color.FromArgb(
                         img.Pixels[index + 2], 
                         img.Pixels[index + 1], 
                         img.Pixels[index + 0]);
@@ -105,39 +105,32 @@ namespace LowPolyTextureCreater
             pictureBox.Image = img.Bitmap;
         }
 
+        public Color GetColorByIndex(int index)
+        {
+            return Colors[index];
+        }
+
+        public void SetColorByIndex(int index, Color color)
+        {
+            Colors[index] = color;
+        }
         public int GetColorIndexByPixelPosition(int pictureBoxSize, int x)
         {
             int pixelForColor2 = pictureBoxSize / Colors.Count;
             return x / pixelForColor2;
         }
-        
-        public COLORColor GetColorByPixelPosition(int pictureBoxSize, int x)
-        {
-            int pixelForColor2 = pictureBoxSize / Colors.Count;
-            return  Colors[x / pixelForColor2];
-        }
-        public COLORColor GetColorByIndex(int index)
-        {
-            return Colors[index];
-        }
-
-        public void SetColorByIndex(int index, COLORColor color)
-        {
-            Colors[index] = color;
-        }
 
 
- 
-        public void InsterColor(int index, COLORColor color)
+        public void InsterRandomColor(int index)
         {
-            Colors.Insert(index, color);
+            Colors.Insert(index, GetRandomColor());
          
             pixelForColor = (int)(Width / Colors.Count);
         }
 
-        public void AddColor( COLORColor color)
+        public void AddRandomColor()
         {
-            Colors.Add(color);
+            Colors.Add(GetRandomColor());
             pixelForColor = (int)(Width / Colors.Count);
         }
 
@@ -147,6 +140,12 @@ namespace LowPolyTextureCreater
 
             Colors.RemoveAt(index);
             pixelForColor = (int)(Width / Colors.Count);
+        }
+
+        private Color GetRandomColor()
+        {
+            Random rnd = new Random();
+            return Color.FromArgb(rnd.Next(0, 255), rnd.Next(0, 255), rnd.Next(0, 255));
         }
     }
 }

@@ -24,7 +24,7 @@ namespace LowPolyTextureCreater
         private int selectedIndexColor = -1;
         private Texture texture;
 
-        private COLORColor copiedColor;
+        private Color copiedColor;
         private bool isCopied = false;
 
         public MainForm()
@@ -104,104 +104,23 @@ namespace LowPolyTextureCreater
 
             if (texture == null) return;
 
+            selectedIndexColor = texture.GetColorIndexByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
 
             if (mouseEventArgs.Button == MouseButtons.Right)
             {
-
-                selectedIndexColor = texture.GetColorIndexByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
-
-
                 вставитьToolStripMenuItem.Enabled = isCopied;
                 удалитьToolStripMenuItem.Enabled = texture.Colors.Count != 1;
                 contextMenuStrip1.Show(Cursor.Position);
             }
 
-          
-
-           
-
-
-
             if (mouseEventArgs.Button == MouseButtons.Left)
             {
-                COLORColor color = texture.GetColorByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
+                Color color = texture.GetColorByIndex(selectedIndexColor);
 
-                colorDialog1.Color = System.Drawing.Color.FromArgb(color.R, color.G, color.B);
-
-
-
-                ColorPicker.ColorDialog colorDialog = new ColorPicker.ColorDialog();
-
-                colorDialog.Color = System.Drawing.Color.FromArgb(color.R, color.G, color.B);
-
-
-
-                if (colorDialog.ShowDialog() == DialogResult.OK)
-                {
-                    int colorIndex = texture.GetColorIndexByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
-
-                    texture.SetColorByIndex(colorIndex, new COLORColor(
-                        colorDialog.Color.R, 
-                        colorDialog.Color.G, 
-                        colorDialog.Color.B));
-
-                    texture.FillPictureBox(sourcePictureBox);
-
-                   
-                }
-
-
-                /*
-
-                if (colorDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    int colorIndex = texture.GetColorIndexByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
-                    texture.SetColorByIndex(colorIndex, new COLORColor(colorDialog1.Color.R, colorDialog1.Color.G, colorDialog1.Color.B));
-                    texture.FillPictureBox(sourcePictureBox);
-                }*/
             }
-
-  
         }
 
     
-        private void button1_Click(object sender, EventArgs e)
-        { 
-            ColorPicker.ColorDialog colorDialog = new ColorPicker.ColorDialog();
-            colorDialog.ShowDialog();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void CreateTexture_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void AddColorRight_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RemoveColorRight_Click(object sender, EventArgs e)
-        {
-      
-        }
-
-        private void AddColorLeft_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void RemoveColorLeft_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void создатьToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
@@ -213,7 +132,7 @@ namespace LowPolyTextureCreater
         {
             if (texture == null) return;
 
-            texture.InsterColor(selectedIndexColor, COLORColor.RandomColor());
+            texture.InsterRandomColor(selectedIndexColor);
             texture.FillPictureBox(sourcePictureBox);
         }
 
@@ -221,7 +140,7 @@ namespace LowPolyTextureCreater
         {
             if (texture == null) return;
 
-            texture.InsterColor(selectedIndexColor + 1, COLORColor.RandomColor());
+            texture.InsterRandomColor(selectedIndexColor + 1);
             texture.FillPictureBox(sourcePictureBox);
 
         }

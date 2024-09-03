@@ -41,12 +41,5 @@ namespace LowPolyTextureCreater
 
         public override Color MenuItemPressedGradientEnd => Color.FromArgb(58, 89, 134);
 
-
-
-  
-
-
-
-
     }
 }

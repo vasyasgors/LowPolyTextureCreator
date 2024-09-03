@@ -9,35 +9,6 @@ using System.Threading.Tasks;
 
 namespace LowPolyTextureCreater
 {
-    /*
-            ImageProcessor img = new ImageProcessor(filteredImage);
-            int r = 0, g = 0, b = 0;
-
-            for (int i = 0; i < img.Pixels.Length; i += img.BytePerPixel)
-            {
-                b = img.Pixels[i + 0];
-                g = img.Pixels[i + 1];
-                r = img.Pixels[i + 2];
-
-                PixelProcessor.ApplyDiscolor(ref r, ref g, ref b);
-
-                r += 5;
-                b -= 40;
-                g -= 10;
-
-                PixelProcessor.ClampColor(ref r, ref g, ref b);
-
-
-                img.Pixels[i + 0] = (byte)b;
-                img.Pixels[i + 1] = (byte)g;
-                img.Pixels[i + 2] = (byte)r;
-            }
-
-
-            img.Unlock();
-
-            filteredImage = img.Bitmap;*/
-
     class ImageProcessor
     {
         public Bitmap Bitmap;
