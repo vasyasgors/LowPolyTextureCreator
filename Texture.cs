@@ -116,37 +116,36 @@ namespace LowPolyTextureCreater
             int pixelForColor2 = pictureBoxSize / Colors.Count;
             return  Colors[x / pixelForColor2];
         }
+        public COLORColor GetColorByIndex(int index)
+        {
+            return Colors[index];
+        }
 
         public void SetColorByIndex(int index, COLORColor color)
         {
             Colors[index] = color;
         }
 
-        public void AddColorToRight(COLORColor color)
+
+ 
+        public void InsterColor(int index, COLORColor color)
+        {
+            Colors.Insert(index, color);
+         
+            pixelForColor = (int)(Width / Colors.Count);
+        }
+
+        public void AddColor( COLORColor color)
         {
             Colors.Add(color);
             pixelForColor = (int)(Width / Colors.Count);
         }
 
-        public void RemoveColorFormRight()
+        public void RemoveColorAt(int index)
         {
             if (Colors.Count == 1) return;
 
-            Colors.RemoveAt(Colors.Count - 1);
-            pixelForColor = (int)(Width / Colors.Count);
-        }
-
-        public void AddColorToLeft(COLORColor color)
-        {
-            Colors.Insert(0, color);
-            pixelForColor = (int)(Width / Colors.Count);
-        }
-
-        public void RemoveColorFromLeft()
-        {
-            if (Colors.Count == 1) return;
-
-            Colors.RemoveAt(0);
+            Colors.RemoveAt(index);
             pixelForColor = (int)(Width / Colors.Count);
         }
     }
