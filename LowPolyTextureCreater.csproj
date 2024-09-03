@@ -46,6 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ColorPicker\ColorBgra.cs" />
+    <Compile Include="Forms\ColorPicker\Controls\ColorGradient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ColorPicker\ColorHsv.cs" />
+    <Compile Include="Forms\ColorPicker\ColorRgb.cs" />
+    <Compile Include="Forms\ColorPicker\Controls\ColorSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ColorPicker\Controls\ColorSlider.Designer.cs">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ColorPicker\Controls\ColorWheel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ColorPicker\NumberHelpers.cs" />
     <Compile Include="Forms\CreateTextureForm.cs">
       <SubType>Form</SubType>
     </Compile>
