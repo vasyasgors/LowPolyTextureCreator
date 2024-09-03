@@ -94,7 +94,9 @@ namespace LowPolyTextureCreater
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.createButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CreateTextureForm";
             this.Text = "Создание";
             ((System.ComponentModel.ISupportInitialize)(this.colorAmountNumericUpDown)).EndInit();

@@ -55,6 +55,8 @@ namespace LowPolyTextureCreater
             CreateTexture(4);
 
 
+  
+
 
         }
 
@@ -116,6 +118,18 @@ namespace LowPolyTextureCreater
             if (mouseEventArgs.Button == MouseButtons.Left)
             {
                 Color color = texture.GetColorByIndex(selectedIndexColor);
+
+                
+                ColorPicker.ColorDialog colorDialog = new ColorPicker.ColorDialog();
+                colorDialog.Color = color;
+
+                if (colorDialog.ShowDialog() == DialogResult.OK)
+                {
+                    texture.SetColorByIndex(selectedIndexColor, colorDialog.Color);
+                    texture.FillPictureBox(sourcePictureBox);
+                }
+                
+
 
             }
         }

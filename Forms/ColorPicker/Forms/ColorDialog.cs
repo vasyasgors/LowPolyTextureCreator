@@ -24,9 +24,20 @@ namespace ColorPicker
 {
     public partial class ColorDialog : Form
     {
+
+
         public ColorDialog()
         {
             this.InitializeComponent();
+
+            okButton.FlatAppearance.BorderColor = Color.FromArgb(51, 51, 51);
+            okButton.FlatAppearance.BorderSize = 0;
+            okButton.ForeColor = Color.FromArgb(230, 230, 230);
+
+            cancelButton.FlatAppearance.BorderColor = Color.FromArgb(51, 51, 51);
+            cancelButton.FlatAppearance.BorderSize = 0;
+            cancelButton.ForeColor = Color.FromArgb(230, 230, 230);
+
             this.colorWheel1.Color = ColorHsv.FromColor(Color.White);
         }
 
@@ -38,13 +49,25 @@ namespace ColorPicker
                 return ColorBgra.FromBgra(rgb.B.ClampToByte(),
                                           rgb.G.ClampToByte(),
                                           rgb.R.ClampToByte(),
-                                          this.alphaColorSlider.Value.ClampToByte());
+                                          1);
             }
 
             set
             {
                 this.colorWheel1.Color = ColorHsv.FromColor(value.ToColor());
-                this.alphaColorSlider.Value = value.A;
+            }
+        }
+
+        public Color Color
+        {
+            get
+            {
+                return Color.FromArgb(redColorSlider.Value, greenColorSlider.Value, blueColorSlider.Value);
+            }
+
+            set
+            {
+                this.colorWheel1.Color = ColorHsv.FromColor(value);
             }
         }
 
@@ -94,10 +117,7 @@ namespace ColorPicker
             this.alphaColorSlider.CustomGradient = colors;
             */
 
-            this.alphaColorSlider.MaxColor = Color.FromArgb(
-                this.redColorSlider.Value,
-                this.greenColorSlider.Value,
-                this.blueColorSlider.Value);
+           
         }
 
         private void SetColorGradientValuesRgb(int r, int g, int b)
@@ -188,7 +208,6 @@ namespace ColorPicker
 
             this.SetColorGradientValuesRgb(rgb.R, rgb.G, rgb.B);
             this.SetColorGradientMinMaxColorsRgb(rgb.R, rgb.G, rgb.B);
-            SetColorGradientMinMaxColorsAlpha(alphaColorSlider.Value);
         }
 
         private void OnColorSliderValueChanged(object sender, EventArgs e)
@@ -204,11 +223,10 @@ namespace ColorPicker
                 sender == greenColorSlider ||
                 sender == blueColorSlider)
             {
-                ColorBgra color = ColorBgra.FromBgra(
+                ColorBgra color = ColorBgra.FromBgr(
                     blueColorSlider.Value.ClampToByte(),
                     greenColorSlider.Value.ClampToByte(),
-                    redColorSlider.Value.ClampToByte(),
-                    alphaColorSlider.Value.ClampToByte());
+                    redColorSlider.Value.ClampToByte());
 
                 this.SetColorGradientMinMaxColorsRgb(color.R, color.G, color.B);
                 this.SetColorGradientMinMaxColorsAlpha(color.A);
@@ -263,11 +281,10 @@ namespace ColorPicker
 
             ColorHsv hsvColor = colorWheel1.Color;
             ColorRgb rgbColor = hsvColor.ToRgb();
-            ColorBgra color = ColorBgra.FromBgra(
+            ColorBgra color = ColorBgra.FromBgr(
                 (byte)rgbColor.B,
                 (byte)rgbColor.G,
-                (byte)rgbColor.R,
-                (byte)alphaColorSlider.Value);
+                (byte)rgbColor.R);
 
             hueColorSlider.Value = hsvColor.Hue;
             saturationColorSlider.Value = hsvColor.Saturation;
@@ -277,7 +294,6 @@ namespace ColorPicker
             greenColorSlider.Value = color.G;
             blueColorSlider.Value = color.B;
 
-            alphaColorSlider.Value = color.A;
 
             this.SetColorGradientValuesHsv(
                 hsvColor.Hue,
@@ -303,6 +319,16 @@ namespace ColorPicker
 
             this.PopIgnoreChangedEvents();
             this.Update();
+        }
+
+        private void blueColorSlider_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

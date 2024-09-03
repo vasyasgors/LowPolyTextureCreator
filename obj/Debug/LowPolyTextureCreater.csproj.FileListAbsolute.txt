@@ -1,4 +1,3 @@
-C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.AssemblyReference.cache
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.Properties.Resources.resources
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.GenerateResource.cache
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.CoreCompileInputs.cache
@@ -9,3 +8,6 @@ C:\Users\Vasya\Desktop\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.pdb
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.exe
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.pdb
 C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.CreateTextureForm.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\ColorPicker.ColorSlider.resources
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.AssemblyReference.cache
+C:\Users\Vasya\Desktop\LowPolyTextureCreator\obj\Debug\ColorPicker.ColorDialog.resources
