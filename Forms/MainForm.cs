@@ -35,8 +35,8 @@ namespace LowPolyTextureCreater
 
             if (result != DialogResult.OK) return;
 
-            texture = new Texture(openFileDialog1.FileName);
-            texture.FillPictureBox(sourcePictureBox);
+            texture = new Texture(sourcePictureBox, openFileDialog1.FileName);
+            //texture.FillPictureBox(sourcePictureBox);
         }
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,6 +46,8 @@ namespace LowPolyTextureCreater
             DialogResult result = saveFileDialog1.ShowDialog();
 
             if (result != DialogResult.OK) return;
+
+          
 
             sourcePictureBox.Image.Save(saveFileDialog1.FileName);
 
@@ -64,9 +66,13 @@ namespace LowPolyTextureCreater
 
             if (mouseEventArgs.Button == MouseButtons.Left)
             {
+                Color color = texture.GetColorByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
+
+                colorDialog1.Color = System.Drawing.Color.FromArgb(color.R, color.G, color.B);
+
                 if (colorDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    int colorIndex = texture.GetColorIndexByPixelColor(sourcePictureBox.Width, mouseEventArgs.X);
+                    int colorIndex = texture.GetColorIndexByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
                     texture.SetColorByIndex(colorIndex, new Color(colorDialog1.Color.R, colorDialog1.Color.G, colorDialog1.Color.B));
                     texture.FillPictureBox(sourcePictureBox);
                 }

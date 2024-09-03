@@ -53,7 +53,7 @@
             this.sourcePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sourcePictureBox.Location = new System.Drawing.Point(82, 65);
             this.sourcePictureBox.Name = "sourcePictureBox";
-            this.sourcePictureBox.Size = new System.Drawing.Size(256, 256);
+            this.sourcePictureBox.Size = new System.Drawing.Size(512, 512);
             this.sourcePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sourcePictureBox.TabIndex = 0;
             this.sourcePictureBox.TabStop = false;
@@ -65,7 +65,7 @@
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(447, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(646, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,14 +81,14 @@
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.загрузитьToolStripMenuItem.Text = "Открыть";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
@@ -102,7 +102,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(70, 339);
+            this.button1.Location = new System.Drawing.Point(183, 583);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(287, 27);
             this.button1.TabIndex = 10;
@@ -113,7 +113,7 @@
             // AddColorRight
             // 
             this.AddColorRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddColorRight.Location = new System.Drawing.Point(366, 132);
+            this.AddColorRight.Location = new System.Drawing.Point(600, 249);
             this.AddColorRight.Name = "AddColorRight";
             this.AddColorRight.Size = new System.Drawing.Size(37, 35);
             this.AddColorRight.TabIndex = 11;
@@ -124,7 +124,7 @@
             // RemoveColorRight
             // 
             this.RemoveColorRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RemoveColorRight.Location = new System.Drawing.Point(366, 183);
+            this.RemoveColorRight.Location = new System.Drawing.Point(600, 290);
             this.RemoveColorRight.Name = "RemoveColorRight";
             this.RemoveColorRight.Size = new System.Drawing.Size(37, 35);
             this.RemoveColorRight.TabIndex = 12;
@@ -135,7 +135,7 @@
             // RemoveColorLeft
             // 
             this.RemoveColorLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RemoveColorLeft.Location = new System.Drawing.Point(17, 173);
+            this.RemoveColorLeft.Location = new System.Drawing.Point(39, 290);
             this.RemoveColorLeft.Name = "RemoveColorLeft";
             this.RemoveColorLeft.Size = new System.Drawing.Size(37, 35);
             this.RemoveColorLeft.TabIndex = 14;
@@ -146,7 +146,7 @@
             // AddColorLeft
             // 
             this.AddColorLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddColorLeft.Location = new System.Drawing.Point(17, 120);
+            this.AddColorLeft.Location = new System.Drawing.Point(39, 249);
             this.AddColorLeft.Name = "AddColorLeft";
             this.AddColorLeft.Size = new System.Drawing.Size(37, 35);
             this.AddColorLeft.TabIndex = 13;
@@ -156,7 +156,7 @@
             // 
             // CreateTexture
             // 
-            this.CreateTexture.Location = new System.Drawing.Point(145, 25);
+            this.CreateTexture.Location = new System.Drawing.Point(361, 36);
             this.CreateTexture.Name = "CreateTexture";
             this.CreateTexture.Size = new System.Drawing.Size(75, 23);
             this.CreateTexture.TabIndex = 15;
@@ -166,7 +166,7 @@
             // 
             // colorAmountTextBox
             // 
-            this.colorAmountTextBox.Location = new System.Drawing.Point(99, 27);
+            this.colorAmountTextBox.Location = new System.Drawing.Point(315, 38);
             this.colorAmountTextBox.Name = "colorAmountTextBox";
             this.colorAmountTextBox.Size = new System.Drawing.Size(30, 20);
             this.colorAmountTextBox.TabIndex = 16;
@@ -175,7 +175,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 28);
+            this.label1.Location = new System.Drawing.Point(230, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 17;
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 394);
+            this.ClientSize = new System.Drawing.Size(646, 624);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.colorAmountTextBox);
             this.Controls.Add(this.CreateTexture);
@@ -198,6 +198,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Low Poly Texture Creator";
             this.Load += new System.EventHandler(this.MainForm_Load);

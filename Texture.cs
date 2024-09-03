@@ -11,7 +11,7 @@ namespace LowPolyTextureCreater
 
     class Texture
     {
-        private const string NewFileImagePath = "source_TEMP.png";
+        //private const string NewFileImagePath = "source_TEMP.png";
         private const int Width = 256;
 
 
@@ -32,11 +32,13 @@ namespace LowPolyTextureCreater
             pixelForColor = (int) (Width / Colors.Count);
         }
 
-        public Texture(string fileName)
+        public Texture(PictureBox pictureBox, string fileName)
         {
             Colors = new List<Color>();
 
+            //Image bitmap = Bitmap.FromFile(fileName);
             Bitmap bitmap = new Bitmap(fileName);
+        
             ImageProcessor img = new ImageProcessor(bitmap);
 
             for (int y = 0; y < Width; y++)
@@ -57,10 +59,15 @@ namespace LowPolyTextureCreater
                 }
             }
 
-            img.Unlock();
 
+            img.Unlock();
+            pictureBox.Image = img.Bitmap;
+
+            bitmap.Dispose();
 
             pixelForColor = (int)(Width / Colors.Count);
+            
+
         }
 
 
@@ -68,7 +75,7 @@ namespace LowPolyTextureCreater
         // Оптимизировать алгоритм и работу
         public void FillPictureBox(PictureBox pictureBox)
         {
-            pictureBox.Image = new Bitmap(NewFileImagePath);
+            pictureBox.Image = new Bitmap(Width, Width, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
 
             ImageProcessor img = new ImageProcessor(pictureBox.Image);
 
@@ -98,10 +105,16 @@ namespace LowPolyTextureCreater
             pictureBox.Image = img.Bitmap;
         }
 
-        public int GetColorIndexByPixelColor(int pictureBoxSize, int x)
+        public int GetColorIndexByPixelPosition(int pictureBoxSize, int x)
         {
             int pixelForColor2 = pictureBoxSize / Colors.Count;
             return x / pixelForColor2;
+        }
+        
+        public Color GetColorByPixelPosition(int pictureBoxSize, int x)
+        {
+            int pixelForColor2 = pictureBoxSize / Colors.Count;
+            return  Colors[x / pixelForColor2];
         }
 
         public void SetColorByIndex(int index, Color color)
