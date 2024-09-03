@@ -120,6 +120,14 @@ namespace LowPolyTextureCreater
                 ColorPicker.ColorDialog colorDialog = new ColorPicker.ColorDialog();
                 colorDialog.Color = color;
 
+                colorDialog.ColorChanged += (s, ev) =>
+                {
+                    texture.SetColorByIndex(selectedIndexColor, colorDialog.Color);
+                    texture.FillPictureBox(sourcePictureBox);
+
+                };
+
+
                 if (colorDialog.ShowDialog() == DialogResult.OK)
                 {
                     texture.SetColorByIndex(selectedIndexColor, colorDialog.Color);

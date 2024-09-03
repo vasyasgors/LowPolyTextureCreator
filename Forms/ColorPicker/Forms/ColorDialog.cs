@@ -25,7 +25,7 @@ namespace ColorPicker
     public partial class ColorDialog : Form
     {
 
-
+        public event EventHandler ColorChanged;
         public ColorDialog()
         {
             this.InitializeComponent();
@@ -39,7 +39,10 @@ namespace ColorPicker
             cancelButton.ForeColor = Color.FromArgb(230, 230, 230);
 
             this.colorWheel1.Color = ColorHsv.FromColor(Color.White);
+
+            colorWheel1.ColorChanged += (s, e) => ColorChanged?.Invoke(this, new EventArgs());
         }
+
 
         public ColorBgra WheelColor
         {
