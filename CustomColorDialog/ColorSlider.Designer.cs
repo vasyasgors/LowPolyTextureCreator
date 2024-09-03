@@ -85,7 +85,7 @@
             this.Controls.Add(this.colorGradient);
             this.Controls.Add(this.label);
             this.Name = "ColorSlider";
-            this.Size = new System.Drawing.Size(154, 20);
+            this.Size = new System.Drawing.Size(200, 20);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);
 

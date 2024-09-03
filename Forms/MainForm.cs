@@ -128,17 +128,43 @@ namespace LowPolyTextureCreater
 
                 colorDialog1.Color = System.Drawing.Color.FromArgb(color.R, color.G, color.B);
 
+
+
+                ColorPicker.ColorDialog colorDialog = new ColorPicker.ColorDialog();
+
+                colorDialog.Color = System.Drawing.Color.FromArgb(color.R, color.G, color.B);
+
+
+
+                if (colorDialog.ShowDialog() == DialogResult.OK)
+                {
+                    int colorIndex = texture.GetColorIndexByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
+
+                    texture.SetColorByIndex(colorIndex, new COLORColor(
+                        colorDialog.Color.R, 
+                        colorDialog.Color.G, 
+                        colorDialog.Color.B));
+
+                    texture.FillPictureBox(sourcePictureBox);
+
+                   
+                }
+
+
+                /*
+
                 if (colorDialog1.ShowDialog() == DialogResult.OK)
                 {
                     int colorIndex = texture.GetColorIndexByPixelPosition(sourcePictureBox.Width, mouseEventArgs.X);
                     texture.SetColorByIndex(colorIndex, new COLORColor(colorDialog1.Color.R, colorDialog1.Color.G, colorDialog1.Color.B));
                     texture.FillPictureBox(sourcePictureBox);
-                }
+                }*/
             }
 
   
         }
 
+    
         private void button1_Click(object sender, EventArgs e)
         { 
             ColorPicker.ColorDialog colorDialog = new ColorPicker.ColorDialog();
