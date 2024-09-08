@@ -167,6 +167,7 @@
             this.cancelButton.TabIndex = 32;
             this.cancelButton.Text = "Отмена";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Visible = false;
             // 
             // ColorDialog
             // 

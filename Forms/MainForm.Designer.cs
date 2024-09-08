@@ -122,6 +122,7 @@
             // 
             // saveFileDialog1
             // 
+            this.saveFileDialog1.FileName = "Texture";
             this.saveFileDialog1.Filter = "PNG|*.png";
             // 
             // contextMenuStrip1

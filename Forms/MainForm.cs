@@ -41,19 +41,12 @@ namespace LowPolyTextureCreater
 
             contextMenuStrip1.ShowImageMargin = false;
 
-
-
-
             создатьToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
 
             this.StartPosition = FormStartPosition.CenterScreen;
 
 
             CreateTexture(4);
-
-
-  
-
 
         }
 

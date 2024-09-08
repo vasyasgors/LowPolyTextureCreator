@@ -40,9 +40,20 @@ namespace ColorPicker
 
             this.colorWheel1.Color = ColorHsv.FromColor(Color.White);
 
-            colorWheel1.ColorChanged += (s, e) => ColorChanged?.Invoke(this, new EventArgs());
+
+            // Возможно с этим будут проблемы
+            hueColorSlider.ValueChanged += OnColorSliderValueChangend;
+            saturationColorSlider.ValueChanged += OnColorSliderValueChangend;
+            valueColorSlider.ValueChanged += OnColorSliderValueChangend;
+            redColorSlider.ValueChanged += OnColorSliderValueChangend;
+            greenColorSlider.ValueChanged += OnColorSliderValueChangend;
+            blueColorSlider.ValueChanged += OnColorSliderValueChangend;
         }
 
+        private void OnColorSliderValueChangend(object sender, EventArgs e)
+        {
+            ColorChanged?.Invoke(this, new EventArgs());
+        }
 
         public ColorBgra WheelColor
         {
