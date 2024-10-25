@@ -24,3 +24,16 @@ D:\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.GenerateResource
 D:\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.CoreCompileInputs.cache
 D:\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.exe
 D:\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.pdb
+D:\Repositories\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.exe.config
+D:\Repositories\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.exe
+D:\Repositories\LowPolyTextureCreator\bin\Debug\LowPolyTextureCreater.pdb
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.AssemblyReference.cache
+D:\Repositories\LowPolyTextureCreator\obj\Debug\ColorPicker.ColorSlider.resources
+D:\Repositories\LowPolyTextureCreator\obj\Debug\ColorPicker.ColorDialog.resources
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.CreateTextureForm.resources
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.MainForm.resources
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.Properties.Resources.resources
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.GenerateResource.cache
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.csproj.CoreCompileInputs.cache
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.exe
+D:\Repositories\LowPolyTextureCreator\obj\Debug\LowPolyTextureCreater.pdb

@@ -109,7 +109,8 @@ namespace LowPolyTextureCreater
             {
                 Color color = texture.GetColorByIndex(selectedIndexColor);
 
-                
+
+
                 ColorPicker.ColorDialog colorDialog = new ColorPicker.ColorDialog();
                 colorDialog.Color = color;
 

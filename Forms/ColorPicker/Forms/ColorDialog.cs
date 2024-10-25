@@ -81,7 +81,9 @@ namespace ColorPicker
 
             set
             {
-                this.colorWheel1.Color = ColorHsv.FromColor(value);
+                redColorSlider.Value = value.R;
+                greenColorSlider.Value = value.G;
+                blueColorSlider.Value = value.B;
             }
         }
 

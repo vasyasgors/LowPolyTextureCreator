@@ -1,0 +1,13 @@
+D:\Repositories\LowPolyTextureCreator\bin\Release\LowPolyTextureCreater.exe.config
+D:\Repositories\LowPolyTextureCreator\bin\Release\LowPolyTextureCreater.exe
+D:\Repositories\LowPolyTextureCreator\bin\Release\LowPolyTextureCreater.pdb
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.csproj.AssemblyReference.cache
+D:\Repositories\LowPolyTextureCreator\obj\Release\ColorPicker.ColorSlider.resources
+D:\Repositories\LowPolyTextureCreator\obj\Release\ColorPicker.ColorDialog.resources
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.CreateTextureForm.resources
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.MainForm.resources
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.Properties.Resources.resources
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.csproj.GenerateResource.cache
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.csproj.CoreCompileInputs.cache
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.exe
+D:\Repositories\LowPolyTextureCreator\obj\Release\LowPolyTextureCreater.pdb
