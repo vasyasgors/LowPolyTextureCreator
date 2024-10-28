@@ -346,5 +346,17 @@ namespace ColorPicker
         {
 
         }
+
+        private void ColorDialog_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show(e.KeyChar.ToString());
+
+            if(e.KeyChar == 13) // enter
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            
+        }
     }
 }
